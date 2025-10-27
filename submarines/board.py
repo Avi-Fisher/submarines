@@ -1,4 +1,3 @@
-from xmlrpc.client import Fault
 
 
 def creat_matrix(num):
@@ -30,15 +29,16 @@ def in_bounds(size,x,y):
     return True
 
 def count_remaining_ships(ships,shots):
-    count_ships = ships.count(1)
-    count_bool = 0
+    count = 0
 
     for i in range(len(ships)):
-        for j in range(len(shots)):
-            if ships[i][j] and shots[i][j]:
-                count_bool += 1
+        for j in range(len(ships)):
+            if  ships and not shots:
+                count += 1
 
-    return count_ships - count_bool
+
+
+    return
 
 def render_public(ships,shots):
     public_matrix = []
@@ -56,6 +56,7 @@ def render_public(ships,shots):
 
     return public_matrix
 
+# def renter_reveal(ships,shots):
 
 
 
