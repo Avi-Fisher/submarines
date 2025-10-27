@@ -56,7 +56,7 @@ def render_public(ships,shots):
 
     return public_matrix
 
-# def renter_reveal(ships,shots):
+#  def renter_reveal(ships,shots):
 
 
 
