@@ -21,7 +21,11 @@ def shoot(state,x,y):
 
     return state
 
+def is_won(state):
+    if state["n_ships"] == state["shots"].count(True):
+        print("You win")
 
+        
 
 
 
