@@ -1,15 +1,25 @@
 def init_game(size,n_ships,max_shots,):
 
-    info_game = {"size":0,
+    state = {"size":size    ,
                  "ships":[],
                  "shots":[],
-                 "n_ships":0,
-                 "max_shots":0,
+                 "n_ships":n_ships,
+                 "max_shots":max_shots,
                  "shots_used":0}
 
-    return info_game
+    return state
 
+def shoot(state,x,y):
+    state["shots"][x][y] = True
 
+    if state["ships"][x][y]:
+        print("good shut")
+    else:
+        print("miss")
+
+    state["shots_used"] += 1
+
+    return state
 
 
 
