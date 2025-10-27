@@ -1,7 +1,7 @@
 from submarines.board import creat_matrix, creat_bool_matrix
 
 
-def init_game(size,n_ships,max_shots,):
+def init_game(size,n_ships,max_shots):
 
     state = {"size":size    ,
              "ships":creat_matrix(size),

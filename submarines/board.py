@@ -35,10 +35,7 @@ def count_remaining_ships(ships,shots):
         for j in range(len(ships)):
             if  ships and not shots:
                 count += 1
-
-
-
-    return
+    return count
 
 def render_public(ships,shots):
     public_matrix = []
