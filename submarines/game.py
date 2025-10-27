@@ -1,11 +1,14 @@
+from submarines.board import creat_matrix, creat_bool_matrix
+
+
 def init_game(size,n_ships,max_shots,):
 
     state = {"size":size    ,
-                 "ships":[],
-                 "shots":[],
-                 "n_ships":n_ships,
-                 "max_shots":max_shots,
-                 "shots_used":0}
+             "ships":creat_matrix(size),
+             "shots":creat_bool_matrix(size),
+             "n_ships":n_ships,
+             "max_shots":max_shots,
+             "shots_used":0}
 
     return state
 
@@ -28,6 +31,7 @@ def is_won(state):
 def is_lost(state):
     if state["max_shots"] == state["shots_used"]:
         print("You lose")
+
 
 
 
