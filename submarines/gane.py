@@ -25,7 +25,9 @@ def is_won(state):
     if state["n_ships"] == state["shots"].count(True):
         print("You win")
 
-        
+def is_lost(state):
+    if state["max_shots"] == state["shots_used"]:
+        print("You lose")
 
 
 
