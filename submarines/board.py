@@ -34,11 +34,28 @@ def count_remaining_ships(ships,shots):
     count_bool = 0
 
     for i in range(len(ships)):
-        for j in range(shots):
+        for j in range(len(shots)):
             if ships[i][j] and shots[i][j]:
                 count_bool += 1
 
     return count_ships - count_bool
+
+def render_public(ships,shots):
+    public_matrix = []
+
+    for i in range(len(ships)):
+        row = []
+
+        for j in range(len(ships)):
+            if ships[i][j] and shots[i][j]:
+                row.append("V")
+            elif shots[i][j]:
+                row.append("X")
+            else:
+                row.append("O")
+
+    return public_matrix
+
 
 
 
