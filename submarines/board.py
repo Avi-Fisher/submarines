@@ -24,6 +24,10 @@ def creat_bool_matrix(num,bool=False):
         matrix.append(row)
     return matrix
 
+def in_bounds(size,x,y):
+    if x > size or y > size or x < 0 or y < 0:
+        return  False
+    return True
 
 
 
