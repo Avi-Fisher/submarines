@@ -1,4 +1,5 @@
 from submarines.board import count_remaining_ships, render_public
+from submarines.game import is_won, is_lost
 
 
 def print_status(state):
@@ -10,7 +11,13 @@ def print_status(state):
 
     print(render_public(state["ships"],state["shots"]))
 
+def print_end(state):
 
+    if is_won(state):
+        print("you win")
+
+    elif is_lost(state):
+        print("you lose")
 
 
 
