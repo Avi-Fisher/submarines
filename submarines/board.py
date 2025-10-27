@@ -29,6 +29,20 @@ def in_bounds(size,x,y):
         return  False
     return True
 
+def count_remaining_ships(ships,shots):
+    count_ships = ships.count(1)
+    count_bool = 0
+
+    for i in range(len(ships)):
+        for j in range(shots):
+            if ships[i][j] and shots[i][j]:
+                count_bool += 1
+
+    return count_ships - count_bool
+
+
+
+
 
 
 
